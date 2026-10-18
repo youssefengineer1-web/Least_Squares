@@ -148,14 +148,50 @@ x_2
 \end{bmatrix}.
 $$
 
-Row-reducing the augmented matrix gives
+Apply the row operations one at a time:
 
 $$
 \left[\begin{array}{cc|c}
 14 & 6 & 11\\
 6 & 3 & 5
 \end{array}\right]
-\sim
+\xrightarrow{\,R_1\to\tfrac1{14}R_1\,}
+\left[\begin{array}{cc|c}
+1 & \tfrac37 & \tfrac{11}{14}\\
+6 & 3 & 5
+\end{array}\right]
+$$
+
+$$
+\left[\begin{array}{cc|c}
+1 & \tfrac37 & \tfrac{11}{14}\\
+6 & 3 & 5
+\end{array}\right]
+\xrightarrow{\,R_2\to R_2-6R_1\,}
+\left[\begin{array}{cc|c}
+1 & \tfrac37 & \tfrac{11}{14}\\
+0 & \tfrac37 & \tfrac27
+\end{array}\right]
+$$
+
+$$
+\left[\begin{array}{cc|c}
+1 & \tfrac37 & \tfrac{11}{14}\\
+0 & \tfrac37 & \tfrac27
+\end{array}\right]
+\xrightarrow{\,R_2\to\tfrac73R_2\,}
+\left[\begin{array}{cc|c}
+1 & \tfrac37 & \tfrac{11}{14}\\
+0 & 1 & \tfrac23
+\end{array}\right]
+$$
+
+$$
+\left[\begin{array}{cc|c}
+1 & \tfrac37 & \tfrac{11}{14}\\
+0 & 1 & \tfrac23
+\end{array}\right]
+\xrightarrow{\,R_1\to R_1-\tfrac37R_2\,}
 \left[\begin{array}{cc|c}
 1 & 0 & \tfrac12\\
 0 & 1 & \tfrac23
