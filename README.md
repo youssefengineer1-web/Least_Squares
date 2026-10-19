@@ -92,6 +92,68 @@ A=
 \end{bmatrix}.
 $$
 
+### Attempting an Exact Solution
+
+Before using least squares, try to solve $A\mathbf{x}=\mathbf{b}$ directly:
+
+$$
+\left[\begin{array}{cc|c}
+1 & 1 & 1\\
+2 & 1 & 2\\
+3 & 1 & 2
+\end{array}\right]
+\xrightarrow{\,R_2\to R_2-2R_1\,}
+\left[\begin{array}{cc|c}
+1 & 1 & 1\\
+0 & -1 & 0\\
+3 & 1 & 2
+\end{array}\right]
+$$
+
+$$
+\left[\begin{array}{cc|c}
+1 & 1 & 1\\
+0 & -1 & 0\\
+3 & 1 & 2
+\end{array}\right]
+\xrightarrow{\,R_3\to R_3-3R_1\,}
+\left[\begin{array}{cc|c}
+1 & 1 & 1\\
+0 & -1 & 0\\
+0 & -2 & -1
+\end{array}\right]
+$$
+
+$$
+\left[\begin{array}{cc|c}
+1 & 1 & 1\\
+0 & -1 & 0\\
+0 & -2 & -1
+\end{array}\right]
+\xrightarrow{\,R_2\to-R_2\,}
+\left[\begin{array}{cc|c}
+1 & 1 & 1\\
+0 & 1 & 0\\
+0 & -2 & -1
+\end{array}\right]
+$$
+
+$$
+\left[\begin{array}{cc|c}
+1 & 1 & 1\\
+0 & 1 & 0\\
+0 & -2 & -1
+\end{array}\right]
+\xrightarrow{\,R_3\to R_3+2R_2\,}
+\left[\begin{array}{cc|c}
+1 & 1 & 1\\
+0 & 1 & 0\\
+0 & 0 & -1
+\end{array}\right].
+$$
+
+The last row means $0=-1$, which is impossible. Therefore, the system has no exact solution, so we use least squares to find the closest solution.
+
 First, form the two sides of the normal equations:
 
 $$
